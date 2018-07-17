@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd" default-init-method="ginit" default-destroy-method="gdestroy">
+    <!-- when initialization happens spring will look if any class here implements BeanPostProcessor so that it will invoke that -->
+    
+    
+    <bean id="camera" class="com.training.autowire.Camera">
+    <property name="type" value="vgo"></property></bean>
+    
+    
+    <bean id="screen"  class="com.training.autowire.Screen">
+    <property name="glassType" value="tuffen"/>
+    <property name="len" value="5"/>
+    <property name="bre" value="4"/>
+    </bean>
+    
+    
+     <bean id="speaker"  class="com.training.autowire.Speaker">
+    <property name="type" value="mono"/>
+    <property name="volLevles" value="10"/>
+    <property name="bre" value="4"/>
+    </bean>
+    
+     <bean id="mobile"  class="com.training.autowire.Mobile">
+    <property name="camera" ref="camera"/>
+    <property name="screen" ref="screen"/>
+    <property name="speaker" ref="speaker"/>
+    </bean>
+    
+
+</beans>
