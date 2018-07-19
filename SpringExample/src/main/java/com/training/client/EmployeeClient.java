@@ -15,20 +15,20 @@ public class EmployeeClient {
 		IEmployee employeeDao=(IEmployee) context.getBean("employeeDaoTemplate");
 		
 		
-//		Employee emp1=new Employee(101,"Bhawana",34000);
-//		Employee emp2=new Employee(102,"Ramma",45000);
-//		Employee emp3=new Employee(103,"Tejashvini",56000);
-//		Employee emp4=new Employee(104,"Tanmayee",60000);
-//		
-//		employeeDao.insertEmployee(emp1);
-//		employeeDao.insertEmployee(emp2);
-//		employeeDao.insertEmployee(emp3);
-//		employeeDao.insertEmployee(emp4);
+		Employee emp1=new Employee(101,"Bhawana",34000);
+		Employee emp2=new Employee(102,"Ramma",45000);
+		Employee emp3=new Employee(103,"Tejashvini",56000);
+		Employee emp4=new Employee(104,"Tanmayee",60000);
+		
+		employeeDao.insertEmployee(emp1);
+		employeeDao.insertEmployee(emp2);
+		employeeDao.insertEmployee(emp3);
+		employeeDao.insertEmployee(emp4);
 		
 		
 		
-		Employee rmp=employeeDao.getEmployee(101);
-		System.out.println(rmp);
+		//Employee rmp=employeeDao.getEmployee(101);
+		//System.out.println(rmp);
 	}
 
 }

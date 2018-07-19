@@ -31,5 +31,8 @@ public static void main(String[] args) {
 	HelloService service=(HelloService) context.getBean("defaultHello");
 	System.out.println(service.sayHello());
 	context.registerShutdownHook();
+	
+
+	
 }
 }
