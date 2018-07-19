@@ -61,16 +61,32 @@ public class UserDaoService {
 
 	
 	
-	public User deleteUser(User user)
+	public String deleteUser(User user)
 	{
-		
+		for(User user1:users)
+		{
+			if(user1.getUserId()==user.getUserId())
+			{
+			users.remove(user);
+				return "deleted successfully";
+			}
+		}
 		return null;
 	}
 
-	public User updateUser(User user)
+	public User updateUser(User user,String name)
 	{
+		for(User user1:users)
+		{
+			if(user1.getUserId()==user.getUserId())
+			{
+				user.setName(name);
+				return user;
+			}
+		}
 		
 		return null;
+	
 	}
 
 }

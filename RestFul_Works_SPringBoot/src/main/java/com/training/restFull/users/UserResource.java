@@ -51,5 +51,18 @@ public class UserResource {
 	 return ResponseEntity.created(location).build();
 
 	 }
+	 
+	 @PostMapping("/userUpdate")
+	 public void updateUser(@RequestBody User user,@PathVariable String name) {
+	User updatedUser = userService.updateUser(user, name);
+	System.out.println("updatedUser " + updatedUser);
+	 }
+	 
+	 
+	 @PostMapping("/userDelete")
+	 public void deleteUser(@RequestBody User user) {
+	String msg = userService.deleteUser(user);
+	System.out.println("Msg" + msg);
+	 }
 	
 }
