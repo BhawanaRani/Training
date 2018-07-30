@@ -31,12 +31,12 @@ class SwaggerConfig {
 	public static final Set<String> DEFAULT_PRODUCES_AND_CONSUMES=
 			        new HashSet<String>(Arrays.asList("application/json","application/xml"));
 	
-	@Bean
-	public Docket api()
-	{
-		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any()).paths(PathSelectors.any()).build();
+//	@Bean
+//	public Docket api()
+//	{
+//		return new Docket(DocumentationType.SWAGGER_2).select().apis(RequestHandlerSelectors.any()).paths(PathSelectors.any()).build();
 //				    .apiInfo(API_INFO)
-//				    .produces(DEFAULT_PRODUCES_AND_CONSUMES)
-//				    .consumes(DEFAULT_PRODUCES_AND_CONSUMES);
-	}
+////				    .produces(DEFAULT_PRODUCES_AND_CONSUMES)
+////				    .consumes(DEFAULT_PRODUCES_AND_CONSUMES);
+//	}
 }
